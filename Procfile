@@ -1,1 +1,1 @@
-web: sh setup.sh && python app.py
+web: sh setup.sh && gunicorn -w 4 -k uvicorn.workers.UvicornWorker app:app
